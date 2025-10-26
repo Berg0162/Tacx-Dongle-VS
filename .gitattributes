@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Exclude non-essential folders from exported ZIP
+/media/* export-ignore
+
+# Exclude repo metadata (optional)
+.gitattributes export-ignore
+.gitignore export-ignore
+
