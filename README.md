@@ -1,16 +1,16 @@
 # 🌀 Tacx-Dongle-VS
-**Virtual Shifting (VS) for legacy Tacx Smart trainers using the LilyGo T-Dongle-S3 and the [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) library.**
+**Virtual Shifting (VS) for older Tacx Smart trainers using the LilyGo T-Dongle-S3 and the [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) library.**
 
 ---
 
 ## 🏁 Overview
 **Tacx-Dongle-VS** is a self-contained dongle that bridges **Zwift’s Virtual Shifting** system with **older Tacx Smart trainers** that never received Garmin’s 2025 firmware update.  
-It combines a modern **ESP32-S3 microcontroller**, a **built-in ST7735 IPS display**, and a **status LED** to deliver plug-and-ride compatibility — no extra PC apps or configuration required.
+It combines a modern **ESP32-S3 microcontroller**, a **built-in ST7735 IPS display**, a **status LED** and with this uploaded code, to deliver **plug-and-ride compatibility**.
 
 ---
 
 ## ⚙️ What is Virtual Shifting (VS)?
-Virtual Shifting lets you *change gears digitally* while riding indoors.  
+Virtual Shifting lets you *change gears digitally* while riding indoors and using the **Zwift Click device**.
 Instead of mechanical chain movements, Zwift adjusts resistance and power targets in software, simulating gear ratios.  
 Recent Tacx trainers implement this natively; older ones cannot — unless a small bridge device translates between Zwift’s BLE protocol and Tacx’s ANT+ FE-C control channel.
 
@@ -22,7 +22,7 @@ The [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) A
 - connects to **Zwift** via BLE (as a Smart Trainer peripheral)  
 - connects to a **Tacx trainer** via ANT+ FE-C  
 - interprets Zwift’s *virtual-gear*, *target-power*, or *gradient* messages  
-- sends equivalent ANT+ commands to the legacy Tacx trainer  
+- sends equivalent ANT+ commands to the older Tacx trainer  
 
 The **Tacx-Dongle-VS** project wraps this library into a ready-to-use hardware package — the LilyGo T-Dongle-S3.
 
@@ -34,8 +34,10 @@ The **Tacx-Dongle-VS** project wraps this library into a ready-to-use hardware p
 - **APA102 LED** – multicolor indicator for connection status  
 - **USB-C** – single-cable power + firmware updates  
 
-Together these make the smallest and most affordable all-in-one bridge for Tacx VS.
+**These make the smallest and most affordable all-in-one bridge for Tacx VS.**
 
+<img src="./media/LilyGo_T-Dongle-S3.png" width="761" height="241" ALIGN="left" alt="T-Dongle-S3">
+<br clear="left">
 ---
 
 ## 🔄 How it Works Together
