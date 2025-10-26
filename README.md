@@ -93,14 +93,14 @@ When both devices show *Connected* (🟢 green), you’re ready to ride!
 
 ---
 
-## 🧠 Display Feedback Legend
+## 🧠 Color Feedback Legend
 | Color | Meaning |
 |:------|:---------|
-| 🟡 Yellow | Scanning / Advertising |
+| 🟡 Yellow | Scanning & Advertising |
 | 🟢 Green | Connected |
 | 🔴 Red | Connection Lost |
-| 🟦 Cyan / Turquoise | Advertising Mode (Tacx) |
-| ⚫ Black Background | Idle / Standby |
+| 🔵 Led only | Scanning for Tacx |
+| 🟠 Led only | Advertising for Zwift |
 
 ---
 
