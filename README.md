@@ -121,7 +121,6 @@ You may freely use, modify, and distribute this project, provided that any deriv
 ## ✍️ Future Ideas
 - OTA (Wi-Fi) firmware updates  
 - OLED or e-paper variant for low-power builds  
-- Custom Zwift HUD integration via BLE GATT  
 - Optional web-UI configuration  
 
 ---
