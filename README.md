@@ -75,9 +75,9 @@ The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virt
 ## 🚀 Getting Started
 1. **Clone** or download this repository.
 2. Unzip this code to your sketch folder.  
-3. Install required **all** libraries via **Arduino IDE → Library Manager**.  
+3. Install **all** required libraries
 4. Select **Board → ESP32S3 Dev Module** (or *T-Dongle-S3* if available).
-5. Set the 
+5. Set the all settings in `Menu->Tools` [Tools](<img src="./media/LilyGo_T-Dongle-S3_Tools.png" width="400" height="600" alt="Tools">)
 6. Connect the dongle via **USB-C**.  
 7. Open the main `.ino` sketch and upload.  
 8. On boot you’ll see:  
@@ -86,8 +86,6 @@ The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virt
    - the **APA102 LED** mirroring the same connection states.  
 
 When both devices show *Connected* (🟢 green), you’re ready to ride.
-
-<img src="./media/LilyGo_T-Dongle-S3_Tools.png" width="400" height="600" alt="Tools">
 
 ---
 
