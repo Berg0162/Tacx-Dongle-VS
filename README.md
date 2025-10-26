@@ -1,5 +1,5 @@
 # 🌀 Tacx-Dongle-VS
-**Virtual Shifting (VS) for legacy Tacx Smart trainers using the LilyGo T-Dongle-S3 and the [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) library.**
+**Virtual Shifting (VS) for older Tacx Smart trainers using the LilyGo T-Dongle-S3 and the [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) library.**
 
 ---
 
@@ -22,7 +22,7 @@ The [Tacx-Virtual-Shifting](https://github.com/Berg0162/Tacx-Virtual-Shifting) A
 - connects to **Zwift** via BLE (as a Smart Trainer peripheral)  
 - connects to a **Tacx trainer** via ANT+ FE-C  
 - interprets Zwift’s *virtual-gear*, *target-power*, or *gradient* messages  
-- sends equivalent ANT+ commands to the legacy Tacx trainer  
+- sends equivalent ANT+ commands to the older Tacx trainer  
 
 The **Tacx-Dongle-VS** project wraps this library into a ready-to-use hardware package — the LilyGo T-Dongle-S3.
 
@@ -35,7 +35,8 @@ The **Tacx-Dongle-VS** project wraps this library into a ready-to-use hardware p
 - **USB-C** – single-cable power + firmware updates  
 
 Together these make the smallest and most affordable all-in-one bridge for Tacx VS.
-
+<img src="./media/LilyGo_T-Dongle-S3.png" width="761" height="241" ALIGN="left" alt="T-Dongle-S3">
+<br clear="left">
 ---
 
 ## 🔄 How it Works Together
