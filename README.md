@@ -104,8 +104,11 @@ When both devices show *Connected* (🟢 green), you’re ready to ride!
 
 ---
 
-## 🖼️ Screenshots
-> *(Add photos of the running dongle here — splash screen, Tacx + Zwift status rows, LED colors, etc.)*
+## 🖼️ Screenshot
+
+**Tacx-Dongle-VS** during **scanning** (for Tacx trainer) and simultaneously **advertising** (for notifying Zwift app), device status Led is **yellow blinking**!
+
+![Scanning and Advertising](media/Screen_small.png)  
 
 ---
 
