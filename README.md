@@ -4,9 +4,9 @@
 ---
 
 ## 🏁 Overview
+<img src="./media/LilyGo_T-Dongle-S3_Size.png" width="600" height="388" ALIGN="left" alt="T-Dongle-S3 Size">
 **Tacx-Dongle-VS** is a self-contained dongle that bridges **Zwift’s Virtual Shifting** system with **older Tacx Smart trainers** that never received Garmin’s 2025 firmware update.  
 It combines a modern **ESP32-S3 microcontroller**, a **built-in ST7735 IPS display**, a **status LED** and with this uploaded code, to deliver **plug-and-ride compatibility**.
-<img src="./media/LilyGo_T-Dongle-S3_Size.png" width="600" height="388" ALIGN="left" alt="T-Dongle-S3 Size">
 <br clear="left">
 
 ---
