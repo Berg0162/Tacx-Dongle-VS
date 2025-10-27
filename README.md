@@ -19,7 +19,7 @@ It combines a modern **ESP32-S3 microcontroller**, a **built-in ST7735 IPS displ
 
 ---
 
-## ⚙️ What is Virtual Shifting (VS)?
+## 🚴 What is Virtual Shifting (VS)?
 Virtual Shifting lets you *change gears digitally* while riding indoors and using the **Zwift Click device**.
 Instead of mechanical chain movements, Zwift adjusts resistance and power targets in software, simulating gear ratios.  
 Recent Tacx trainers implement this natively; older ones cannot — unless a small bridge device translates between Zwift’s BLE protocol and Tacx’s ANT+ FE-C control channel.
