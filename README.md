@@ -47,17 +47,8 @@ For pricing see for example: [TinyTronics](https://www.tinytronics.nl/en/develop
 ---
 
 ## 🔄 How it Works Together
-    ┌────────────┐      BLE       ┌──────────────────────┐
-    │   Zwift    │  ←────────→    │  T-Dongle-S3 (ESP32) │
-    └────────────┘                │  • Tacx-VS library   │
-                                  │  • Display feedback  │
-                                  │  • APA102 LED cues   │
-                                  └─────────┬────────────┘
-                                            │  ANT+ FE-C
-                                            ▼
-                                    ┌────────────────┐
-                                    │ Tacx Trainer   │
-                                    └────────────────┘
+<img src="./media/Schema_small.png" width="660" height="120" ALIGN="left" alt="Schema">
+<br clear="left">
 
 The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virtual-Shifting library, and re-emits trainer-compatible ANT+ commands — effectively adding VS to older hardware.
 
