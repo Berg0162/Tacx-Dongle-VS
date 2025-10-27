@@ -103,12 +103,15 @@ When both devices show *Connected* (🟢 green), you’re ready to ride!
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Screenshots
+
+<img src="./media/Screen_1.png" width="550" height="250" align= "left" alt="Screen #1">
+<img src="./media/Screen_2.png" width="550" height="250" align= "right" alt="Screen #2">
+<img src="./media/Screen_3.png" width="550" height="250" align= "left" alt="Screen #3">
+<img src="./media/Screen_4.png" width="550" height="250" align= "right" alt="Screen #4">
+<br clear="left">
 
 **Tacx-Dongle-VS** during **scanning** (for Tacx trainer) and simultaneously **advertising** (for notifying Zwift app), device status Led is **yellow blinking**!<br>
-
-<img src="./media/Screen_small.png" width="500" height="230" align= "left" alt="T-Dongle-S3 Size">
-<br clear="left">
 
 ---
 
