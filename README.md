@@ -56,8 +56,7 @@ For pricing (in the **EU**) see for example: [TinyTronics](https://www.tinytroni
 ## 🔄 How it Works Together
 <img src="./media/Schema_small.png" width="660" height="120" ALIGN="left" alt="Schema">
 <br clear="left">
-
-
+<br>
 The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virtual-Shifting library, and re-emits trainer-compatible ANT+ commands — effectively adding VS to older hardware.
 
 ---
