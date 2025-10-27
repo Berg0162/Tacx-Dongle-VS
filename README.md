@@ -74,7 +74,7 @@ The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virt
 ## 🚀 Getting Started
 
 1. **Clone** or download this repository.  
-2. Unzip this code to your Arduino **sketch folder**.  
+2. Unzip/copy the `Tacx-Dongle-Virtual-Shifting` folder to your Arduino **sketch folder**.  
 3. Install **all required libraries** (see [Dependencies](#-dependencies)).  
 4. Select **Board → ESP32S3 Dev Module**.  
 5. Set all options in **`Tools → Menu`** as shown below:  
@@ -82,7 +82,7 @@ The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virt
    ![T-Dongle-S3 Tools Settings](media/LilyGo_T-Dongle-S3_Tools.png)  
 
 6. Connect the dongle via **USB-C**.  
-7. Open the main `.ino` sketch and **upload**.  
+7. Open the `Tacx-Dongle-Virtual-Shifting.ino` sketch and **upload**.  
 8. On boot you’ll see:  
    - a **splash screen**,  
    - Tacx and Zwift connection rows with text + color cues,  
@@ -128,6 +128,7 @@ You may freely use, modify, and distribute this project, provided that any deriv
 ## ❤️ Contributing
 This project is just starting!
 If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome in [Discussions](https://github.com/Berg0162/Tacx-Dongle-VS/discussions).
-<details>
+
+---
 
 
