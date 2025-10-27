@@ -118,7 +118,9 @@ You may freely use, modify, and distribute this project, provided that any deriv
 
 ---
 
-> © 2025 Tacx-Dongle-VS Project • Developed with ❤️ by the community  
->  
-> For questions or contributions, open a [GitHub issue](../../issues) or start a discussion thread.
+## ❤️ Contributing
+This project is just starting!
+If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome in [Discussions](https://github.com/Berg0162/Tacx-Dongle-VS/discussions).
+<details>
+
 
