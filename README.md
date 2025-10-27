@@ -49,7 +49,7 @@ The **Tacx-Dongle-VS** project wraps this library into a ready-to-use hardware p
 <img src="./media/LilyGo_T-Dongle-S3.png" width="761" height="241" ALIGN="left" alt="T-Dongle-S3">
 <br clear="left">
 
-For pricing see for example: [TinyTronics](https://www.tinytronics.nl/en/development-boards/microcontroller-boards/with-wi-fi/lilygo-t-dongle-s3-esp32-s3)
+For pricing (in the **EU**) see for example: [TinyTronics](https://www.tinytronics.nl/en/development-boards/microcontroller-boards/with-wi-fi/lilygo-t-dongle-s3-esp32-s3)
 
 ---
 
