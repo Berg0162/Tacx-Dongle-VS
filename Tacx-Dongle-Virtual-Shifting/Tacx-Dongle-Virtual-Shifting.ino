@@ -40,7 +40,7 @@ the pairing screens! Notice: Zwift extends device names with additional numbers 
 // -------------------------------------------------------------------------------------------
 // COMPILER DIRECTIVE to allow/suppress DEBUG messages that help debugging...
 // Uncomment general "#define DEBUG" to activate
-//#define DEBUG
+#define DEBUG
 
 // --------------------------------------------------------------------------------------------
 #include <TacxVirtualShifting.h>
