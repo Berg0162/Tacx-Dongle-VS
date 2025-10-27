@@ -109,7 +109,7 @@ When both devices show *Connected* (🟢 green), you’re ready to ride!
 <img src="./media/Screen_2.png" width="275" height="125" alt="Screen #2">
 <br clear="left">
 
-**Tacx-Dongle-VS** shows splash screen and starts **scanning** (for Tacx trainer), device status Led is **turquoise blinking**!<br>
+**Tacx-Dongle-VS** shows splash screen (during 3 seconds) and starts **scanning** (for Tacx trainer), device status Led is **turquoise blinking**!<br>
 
 ---
 
@@ -117,7 +117,7 @@ When both devices show *Connected* (🟢 green), you’re ready to ride!
 <img src="./media/Screen_4.png" width="275" height="125" alt="Screen #4">
 <br clear="left">
 
-**Tacx-Dongle-VS** shows **scanning** (for Tacx trainer) has a timeout and starts in addition **advertising** (for notifying Zwift app), device status Led is **yellow blinking**!<br>
+**Tacx-Dongle-VS** shows a (10 seconds) scanning-timeout, device status Led is **red blinking**. Finally it keeps scanning (for Tacx trainer) and starts also **advertising** (for notifying Zwift app), device status Led is now **yellow blinking**!<br>
 
 ---
 
