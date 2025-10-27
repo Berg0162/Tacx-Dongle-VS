@@ -40,7 +40,7 @@ the pairing screens! Notice: Zwift extends device names with additional numbers 
 // -------------------------------------------------------------------------------------------
 // COMPILER DIRECTIVE to allow/suppress DEBUG messages that help debugging...
 // Uncomment general "#define DEBUG" to activate
-#define DEBUG
+//#define DEBUG
 
 // --------------------------------------------------------------------------------------------
 #include <TacxVirtualShifting.h>
@@ -59,7 +59,7 @@ void setup() {
   Serial.flush();
   delay(1000); // Give Serial I/O time to settle
 #endif
-  LOG("ESP32 NimBLE Tacx Legacy Virtual Shifting");
+  LOG("ESP32 NimBLE Older Tacx Virtual Shifting");
   LOG("LilyGo T-Dongle-S3      VS-Version %s", CODE_VERSION);
   delay(200);
 #ifdef TACXNEO_FIRSTGENERATION

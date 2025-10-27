@@ -36,21 +36,6 @@ struct RowState {
   uint16_t color = CLR_RED;  // Default
 };
 
-/* Convert RGB to RGB565
-uint16_t rgb565( const unsigned long rgb)
-{
-  uint16_t R = (rgb >> 16) & 0xFF;
-  uint16_t G = (rgb >>  8) & 0xFF;
-  uint16_t B = (rgb      ) & 0xFF;
-
-  uint16_t ret  = (R & 0xF8) << 8;  // 5 bits
-           ret |= (G & 0xFC) << 3;  // 6 bits
-           ret |= (B & 0xF8) >> 3;  // 5 bits
-       
-  return( ret);
-}
-*/
-
 // ================== CLASS DEFINITION ==================
 class TacxDisplay {
 public:
