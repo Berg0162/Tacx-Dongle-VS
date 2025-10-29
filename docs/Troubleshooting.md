@@ -1,5 +1,5 @@
 
-🔧Troubleshooting
+# 🔧Troubleshooting
 
 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
 
