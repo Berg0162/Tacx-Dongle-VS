@@ -55,7 +55,9 @@ This keeps your laptop as the power source but prevents Zwift resets.
 
 > An USB-A charge-only adapter is a device that physically blocks data transmission, allowing it to safely charge devices like phones and tablets from public USB ports without the risk of data theft or malware from "juice jacking". It achieves this by disconnecting the data pins inside the USB connection, meaning the adapter **only transmits power**, not information.
 
+<img src="../media/Delock_easy_USB_Adapter.png" width="250" height="140" align= "left" alt="adapter"> </br>
 These are inexpensive adapters often called “USB condom” or “data blocker”. Perfect for stable powering of ESP devices from a PC port.
+<br clear="left">
 
 2. **Power from isolated 5 V source**
 
