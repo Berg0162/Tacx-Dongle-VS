@@ -74,7 +74,7 @@ The ESP32-S3 includes a built-in USB bootloader that always runs before your ske
 
 2. **Press and hold** the **BOOT** button (on the back side of the T-Dongle-S3).
 
-3. **While holding BOOT**, plug in the dongle via USB-A to your computer.
+3. **While holding BOOT**, plug in the dongle via USB-A to your computer with Arduino IDE.
 
 4. **Release BOOT** once the IDE detects the COM port (it may appear as ESP32S3 Dev Module or similar).
 
