@@ -139,4 +139,6 @@ If you’re interested in testing, coding, writing docs, or just giving feedback
 
 ---
 
+## 🔧[Troubleshooting](docs/Troubleshooting.md)
+
 
