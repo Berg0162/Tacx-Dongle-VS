@@ -1,7 +1,9 @@
 
 # 🔧Troubleshooting
 
-🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
+---
+
+## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
 
 When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a tacx trainer....
 
@@ -21,52 +23,52 @@ Specifically:
 
 This process causes **momentary USB bus resets** on some ports — particularly:
 
-	- On Windows and macOS laptops where Zwift runs in full control,
+- On Windows and macOS laptops where Zwift runs in full control,
 
-	- On ports connected to the main root hub (shared power domain).
+- On ports connected to the main root hub (shared power domain).
 
 So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly. 
 
-🔌 Why this doesn’t happen with an USB-A charger?
+### 🔌 Why this doesn’t happen with an USB-A charger?
 
 When powered from, a dedicated USB charger, a power bank, or a powered hub with no active data connection.
 
-	- There’s **no data connection**, only +5 V power.
+- There’s **no data connection**, only +5 V power.
 
-	- The ESP32-S3’s USB peripheral is idle.
+- The ESP32-S3’s USB peripheral is idle.
 
-	- So it runs fully independently — stable and isolated.
+- So it runs fully independently — stable and isolated.
 
 When powered from the laptop/computer (with Zwift running):
 
-	- USB data lines (D+ / D–) are active.
+- USB data lines (D+ / D–) are active.
 
-	- Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.
+- Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.
 
 
-✅ Workarounds
+### ✅ Workarounds
 
-1. Use an additional data-blocking USB adapter
+1. **Use an additional data-blocking USB adapter**
 
 Use a **USB “charge-only” cable** or **data blocker** that passes only +5 V and GND, not D+ or D–.
 This keeps your laptop as the power source but prevents Zwift resets.
 
-> An USB-A charge-only adapter is a device that physically blocks data transmission, allowing it to safely charge devices like phones and tablets from public USB ports without the risk of data theft or malware from "juice jacking". It achieves this by disconnecting the data pins inside the USB connection, meaning the adapter **only transmits power**, not information. 
+> An USB-A charge-only adapter is a device that physically blocks data transmission, allowing it to safely charge devices like phones and tablets from public USB ports without the risk of data theft or malware from "juice jacking". It achieves this by disconnecting the data pins inside the USB connection, meaning the adapter **only transmits power**, not information.
 
-🔌 These are inexpensive adapters often called “USB condom” or “data blocker”.
-Perfect for stable powering of ESP devices from a PC port.
+These are inexpensive adapters often called “USB condom” or “data blocker”. Perfect for stable powering of ESP devices from a PC port.
 
-2. Power from isolated 5 V source
+2. **Power from isolated 5 V source**
 
 Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
 
+---
 
-🧰 Safe Boot & Reflashing Guide
+## 🧰 Safe Boot & Reflashing Guide
 
-If you’ve accidently disabled the Tacx-Dongl-VS, you can **still upload new firmware** through the Arduino IDE at any time.
+If you’ve accidently disabled the **Tacx-Dongle-VS**, you can **still upload new firmware** through the Arduino IDE at any time.
 The ESP32-S3 includes a built-in USB bootloader that always runs before your sketch — so it’s impossible to “brick” the device through software.
 
-🔄 Reflashing procedure
+### 🔄 Reflashing procedure
 
 1. **Unplug** the dongle from power.
 
