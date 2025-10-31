@@ -87,6 +87,8 @@ The dongle receives Zwift VS events via BLE, translates them using the Tacx-Virt
    - Tacx and Zwift connection rows with text + color cues,  
    - the **APA102 LED** mirroring the same connection states.  
 
+---
+
 When both devices show *Connected* (🟢 green), you’re ready to ride!
 
 <img src="./media/Screen_6.png" width="275" height="125" align= "left" alt="Screen #6">
