@@ -68,6 +68,23 @@ Continue using a wall adapter (USB-A charger) or a small power bank if you want 
 
 3. **Compile with ???? selected**
 
+💡 Why this works
+
+Zwift looks for:
+
+- Known Vendor IDs (Tacx, Garmin, Wahoo, etc.).
+
+- Pure CDC devices with ANT+/trainer strings.
+
+Your dongle:
+
+- Has an unknown class mix (CDC + HID).
+
+- Returns Espressif’s generic VID/PID (never whitelisted as a trainer).
+
+>➡️ Zwift’s USB enumeration logic quickly marks it as not a relevant peripheral.
+>It won’t continuously reset the port anymore.
+>
 ---
 
 ## 🧰 Safe Boot & Reflashing Guide
