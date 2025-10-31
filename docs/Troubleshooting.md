@@ -98,7 +98,7 @@ without interference from Zwift’s USB scans.
 
 ### 🧩 What’s really going on
 
-When you select **Hardware CDC and JTAG** in the `Tools` -> menu:
+When you select **Hardware CDC and JTAG** in the `Tools → Menu`:
 
 - The hardware USB block is owned by the Arduino core.
 
@@ -107,7 +107,7 @@ When you select **Hardware CDC and JTAG** in the `Tools` -> menu:
 When your code later calls the code section of `ZWIFT_SAFE_MODE` you are re-initializing that same hardware peripheral under the TinyUSB driver.
 TinyUSB takes full ownership of the USB controller, replacing the **CDC and JTAG** setup that the bootloader used.
 
-Result:
+Result in Arduino IDE:
 
 - The old CDC interface disappears → IDE loses the COM port.
 
