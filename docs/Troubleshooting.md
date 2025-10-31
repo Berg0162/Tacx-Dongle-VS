@@ -4,10 +4,11 @@
 ---
 
 ## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
-
-When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a tacx trainer....
+<img src="../media/Screen_5.png" width="450" height="325" align= "left" alt="Laptop_connected"> </br>
+When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a tacx trainer....<br>
 
 However, when Zwift starts and reaches its **pairing screen**, the app (and its helper processes) aggressively scan for trainer interfaces — both *wireless* (BLE) and *wired* (USB).
+<br clear="left">
 
 Specifically:
 
@@ -27,7 +28,7 @@ This process causes **momentary USB bus resets** on some ports — particularly:
 
 - On ports connected to the main root hub (shared power domain).
 
-So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any measures!!
+So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any measures!
 
 ### 🔌 Why this doesn’t happen with an USB-A charger?
 
