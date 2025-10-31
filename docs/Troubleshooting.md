@@ -84,7 +84,30 @@ Your dongle:
 
 >➡️ Zwift’s USB enumeration logic quickly marks it as not a relevant peripheral.
 >It won’t continuously reset the port anymore.
->
+
+
+🧩 What’s really going on
+
+When you select “Hardware CDC and JTAG” in the menu:
+
+- The hardware USB block is owned by the Arduino core.
+
+- It creates the CDC (Serial/COM) interface used for uploads and Serial Monitor.
+
+When your code later calls:
+you are re-initializing that same hardware peripheral under the TinyUSB driver.
+TinyUSB takes full ownership of the USB controller, replacing the CDC/JTAG setup that the bootloader used.
+
+Result:
+
+- The old CDC interface disappears → IDE loses the COM port.
+
+- The device re-enumerates as a pure HID (or composite) but not as the upload target.
+
+- From the IDE’s point of view the board “vanished”.
+
+**That’s why you must press the BOOT button to re-enter the ROM bootloader before the next upload.**
+
 ---
 
 ## 🧰 Safe Boot & Reflashing Guide
