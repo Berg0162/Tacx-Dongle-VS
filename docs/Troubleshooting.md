@@ -61,7 +61,9 @@ These are inexpensive adapters often called “USB condom” or “data blocker�
 
 2. **Power from isolated 5 V source**
 
+<img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter"> </br>
 Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
+<br clear="left">
 
 ---
 
