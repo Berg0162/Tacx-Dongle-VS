@@ -98,7 +98,7 @@ without interference from Zwift’s USB scans.
 
 ### 🧩 What’s really going on
 
-When you select **Hardware CDC and JTAG** in the menu:
+When you select **Hardware CDC and JTAG** in the `Tools` -> menu:
 
 - The hardware USB block is owned by the Arduino core.
 
