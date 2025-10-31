@@ -96,7 +96,7 @@ Zwift’s discovery logic quickly marks it as irrelevant and stops polling it.
 As a result, the dongle remains stable and continues to bridge BLE data
 without interference from Zwift’s USB scans.
 
-### 🧩 What’s really going on
+### 🧩 What’s going on when connected to computer running Arduino IDE
 
 When you select **Hardware CDC and JTAG** in the `Tools → Menu`:
 
@@ -107,7 +107,7 @@ When you select **Hardware CDC and JTAG** in the `Tools → Menu`:
 When your code later calls the code section of `ZWIFT_SAFE_MODE` you are re-initializing that same hardware peripheral under the TinyUSB driver.
 TinyUSB takes full ownership of the USB controller, replacing the **CDC and JTAG** setup that the bootloader used.
 
-Result when connected to computer running Arduino IDE:
+Results:
 
 - The old CDC interface disappears → IDE loses the COM port.
 
