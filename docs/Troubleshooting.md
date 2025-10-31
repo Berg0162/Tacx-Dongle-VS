@@ -120,8 +120,7 @@ Results:
 ---
 
 ## 🧰 Safe Boot & Reflashing Guide
-
-If you’ve accidently or deliberately disabled the **Tacx-Dongle-VS**, you can **still upload new firmware** through the Arduino IDE at any time.
+When the **Tacx-Dongle-VS** is no longer recognized in Arduino IDE, you can **still upload new firmware** through the Arduino IDE at any time.
 The ESP32-S3 includes a built-in USB bootloader that always runs before your sketch — so it’s impossible to “brick” the device through software.
 
 ### 🔄 Reflashing procedure
