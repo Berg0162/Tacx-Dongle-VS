@@ -115,7 +115,7 @@ Result in Arduino IDE:
 
 - From the IDE’s point of view the board “vanished”.
 
-**That’s why you must press the BOOT button to re-enter the ROM bootloader before the next upload.**
+**That’s why you must hold the BOOT button to re-enter the ROM bootloader before the next upload.**
 
 ---
 
