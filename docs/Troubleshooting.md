@@ -65,6 +65,8 @@ These are inexpensive adapters often called “USB condom” or “data blocker�
 Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
 <br clear="left">
 
+3. **Compile with ???? selected**
+
 ---
 
 ## 🧰 Safe Boot & Reflashing Guide
