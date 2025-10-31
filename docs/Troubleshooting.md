@@ -66,37 +66,47 @@ These are inexpensive adapters often called “USB condom” or “data blocker�
 Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
 <br clear="left">
 
-3. **Compile with ???? selected**
+ ---
+ 
+## 🔮Compile this code with `ZWIFT_SAFE_MODE` defined
 
-💡 Why this works
+When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Dongle-S3’s USB interface
+to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
+This makes the dongle appear to a computer as a harmless HID device rather than a serial port.
 
-Zwift looks for:
+❗Recommended (**especially**) for use of an USB-A Port that belongs to the laptop/computer running Zwift.
+Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.
 
-- Known Vendor IDs (Tacx, Garmin, Wahoo, etc.).
+⚠️ Uploads via Arduino IDE: not possible directly after flashing this mode.
+To reprogram the dongle, press BOOT to enter the ESP32-S3 bootloader. see:
 
-- Pure CDC devices with ANT+/trainer strings.
+When the directive is **not** defined, the sketch builds in "normal" mode.
+In this mode the USB interface remains a normal CDC serial device:
 
-Your dongle:
+- Arduino IDE uploads and Serial Monitor work as usual.
 
-- Has an unknown class mix (CDC + HID).
+- Zwift may repeatedly probe the dongle if connected to the same computer.
 
-- Returns Espressif’s generic VID/PID (never whitelisted as a trainer).
+### 💡 Why this works
 
->➡️ Zwift’s USB enumeration logic quickly marks it as not a relevant peripheral.
->It won’t continuously reset the port anymore.
+Zwift scans every USB device when pairing with trainers and ANT+ dongles.
+Devices that identify as serial (CDC) or as known trainer brands (Tacx, Garmin, Wahoo, etc.) are queried repeatedly.
+By switching the T-Dongle-S3 to the TinyUSB HID class, the dongle presents itself
+as a generic **Human Interface Device** with an unrecognized vendor/product ID.
+Zwift’s discovery logic quickly marks it as irrelevant and stops polling it.
+As a result, the dongle remains stable and continues to bridge BLE data
+without interference from Zwift’s USB scans.
 
+### 🧩 What’s really going on
 
-🧩 What’s really going on
-
-When you select “Hardware CDC and JTAG” in the menu:
+When you select **Hardware CDC and JTAG** in the menu:
 
 - The hardware USB block is owned by the Arduino core.
 
 - It creates the CDC (Serial/COM) interface used for uploads and Serial Monitor.
 
-When your code later calls:
-you are re-initializing that same hardware peripheral under the TinyUSB driver.
-TinyUSB takes full ownership of the USB controller, replacing the CDC/JTAG setup that the bootloader used.
+When your code later calls the code section of `ZWIFT_SAFE_MODE` you are re-initializing that same hardware peripheral under the TinyUSB driver.
+TinyUSB takes full ownership of the USB controller, replacing the **CDC and JTAG** setup that the bootloader used.
 
 Result:
 
@@ -112,7 +122,7 @@ Result:
 
 ## 🧰 Safe Boot & Reflashing Guide
 
-If you’ve accidently disabled the **Tacx-Dongle-VS**, you can **still upload new firmware** through the Arduino IDE at any time.
+If you’ve accidently or deliberately disabled the **Tacx-Dongle-VS**, you can **still upload new firmware** through the Arduino IDE at any time.
 The ESP32-S3 includes a built-in USB bootloader that always runs before your sketch — so it’s impossible to “brick” the device through software.
 
 ### 🔄 Reflashing procedure
