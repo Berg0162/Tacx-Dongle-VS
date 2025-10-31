@@ -4,7 +4,7 @@
 ---
 
 ## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
-<img src="../media/Screen_5.png" width="450" height="325" align= "left" alt="Laptop_connected"> </br>
+<img src="../media/Screen_5.png" width="350" height="250" align= "left" alt="Laptop_connected"> </br>
 When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a tacx trainer....<br>
 
 However, when Zwift starts and reaches its **pairing screen**, the app (and its helper processes) aggressively scan for trainer interfaces — both *wireless* (BLE) and *wired* (USB).
