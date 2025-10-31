@@ -65,7 +65,7 @@ These are inexpensive adapters often called “USB condom” or “data blocker�
 Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
 <br clear="left">
 
- ---
+---
  
 ## 🔮Compile this code with `ZWIFT_SAFE_MODE` defined
 
@@ -77,7 +77,7 @@ This makes the dongle appear to a computer as a harmless HID device rather than 
 Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.
 
 ⚠️ Uploads via Arduino IDE: not possible directly after flashing this mode.
-To reprogram the dongle, press BOOT to enter the ESP32-S3 bootloader. [See](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
+To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
 
 When the directive is **not** defined, the sketch builds in "normal" mode.
 In this mode the USB interface remains a normal CDC serial device:
