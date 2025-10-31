@@ -46,7 +46,6 @@ When powered from the laptop/computer (with Zwift running):
 
 - Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.
 
-
 ### ✅ Workarounds
 
 1. **Use an additional data-blocking USB adapter**
@@ -78,7 +77,7 @@ This makes the dongle appear to a computer as a harmless HID device rather than 
 Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.
 
 ⚠️ Uploads via Arduino IDE: not possible directly after flashing this mode.
-To reprogram the dongle, press BOOT to enter the ESP32-S3 bootloader. see:
+To reprogram the dongle, press BOOT to enter the ESP32-S3 bootloader. [See](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
 
 When the directive is **not** defined, the sketch builds in "normal" mode.
 In this mode the USB interface remains a normal CDC serial device:
