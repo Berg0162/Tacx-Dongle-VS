@@ -28,7 +28,7 @@ This process causes **momentary USB bus resets** on some ports — particularly:
 
 - On ports connected to the main root hub (shared power domain).
 
-So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any of the 3 following measures!
+So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any of the following measures!
 
 ### 🔌 Why this doesn’t happen with an USB-A charger?
 
