@@ -30,6 +30,23 @@ This process causes **momentary USB bus resets** on some ports — particularly:
 
 So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any of the following measures!
 
+### ✅ Workarounds
+
+1. **Use an additional data-blocking USB adapter**
+
+Use a **USB “charge-only” cable** or **data blocker** that passes only +5 V and GND, not D+ or D–.
+This keeps your laptop as the power source but prevents Zwift resets.
+
+> An USB-A charge-only adapter is a device that physically blocks data transmission, allowing it to safely charge devices like phones and tablets from public USB ports without the risk of data theft or malware from "juice jacking". It achieves this by disconnecting the data pins inside the USB connection, meaning the adapter **only transmits power**, not information.
+
+<img src="../media/Delock_easy_USB_Adapter.png" width="250" height="140" align= "left" alt="adapter"> </br>
+These are inexpensive adapters often called “USB condom” or “data blocker”. Perfect for stable powering of ESP devices from a PC port.
+<br clear="left">
+
+2. **Use a wall adapter (USB-A charger) or a small power bank if you want absolute stability.**
+
+<img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter">
+
 ### 🔌 Why this doesn’t happen with an USB-A charger?
 
 When powered from, a dedicated USB charger, a power bank, or a powered hub with no active data connection.
@@ -46,23 +63,6 @@ When powered from the laptop/computer (with Zwift running):
 
 - Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.
 
-### ✅ Workarounds
-
-1. **Use an additional data-blocking USB adapter**
-
-Use a **USB “charge-only” cable** or **data blocker** that passes only +5 V and GND, not D+ or D–.
-This keeps your laptop as the power source but prevents Zwift resets.
-
-> An USB-A charge-only adapter is a device that physically blocks data transmission, allowing it to safely charge devices like phones and tablets from public USB ports without the risk of data theft or malware from "juice jacking". It achieves this by disconnecting the data pins inside the USB connection, meaning the adapter **only transmits power**, not information.
-
-<img src="../media/Delock_easy_USB_Adapter.png" width="250" height="140" align= "left" alt="adapter"> </br>
-These are inexpensive adapters often called “USB condom” or “data blocker”. Perfect for stable powering of ESP devices from a PC port.
-<br clear="left">
-
-2. **Power from isolated 5 V source**
-
-<img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter"> </br>
-Continue using a wall adapter (USB-A charger) or a small power bank if you want absolute stability.
 <br clear="left">
 
 ---
