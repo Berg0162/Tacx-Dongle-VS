@@ -45,29 +45,23 @@ These are inexpensive adapters often called “USB condom” or “data blocker�
 
 2. **Use a wall adapter (USB-A charger) or a small power bank if you want absolute stability.**
 
-<img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter">
+<img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter"><br>
 
-### 🔌 Why this doesn’t happen with an USB-A charger?
+🔌 **Why this doesn’t happen with an USB-A charger?**
 
-When powered from, a dedicated USB charger, a power bank, or a powered hub with no active data connection.
+When powered from, a dedicated USB charger, a power bank, or a powered hub with no active data connection.<br>
+&nbsp;- There’s **no data connection**, only +5 V power.<br>
+&nbsp;- The ESP32-S3’s USB peripheral is idle.<br>
+&nbsp;- So it runs fully independently — stable and isolated.<br>
 
-- There’s **no data connection**, only +5 V power.
-
-- The ESP32-S3’s USB peripheral is idle.
-
-- So it runs fully independently — stable and isolated.
-
-When powered from the laptop/computer (with Zwift running):
-
-- USB data lines (D+ / D–) are active.
-
-- Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.
-
+When powered from the laptop/computer (with Zwift running):<br>
+&nbsp;- USB data lines (D+ / D–) are active.<br>
+&nbsp;- Zwift’s probe cycles cause **line resets** and **host-driven bus events** that make the ESP32-S3’s internal USB peripheral reboot.<br>
 <br clear="left">
 
 ---
  
-## 🔮Compile this code with `ZWIFT_SAFE_MODE` defined
+## 🔮Compile the code with `ZWIFT_SAFE_MODE` defined
 
 When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Dongle-S3’s USB interface
 to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
@@ -76,10 +70,10 @@ This makes the dongle appear to a computer as a harmless HID device rather than 
 ❗Recommended (**especially**) for use of an USB-A Port that belongs to the laptop/computer running Zwift.
 Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.
 
-⚠️ Uploads via Arduino IDE: not possible directly after flashing this mode.
+⚠️ Uploads via Arduino IDE: **not** possible directly after flashing this mode.
 To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
 
-When the directive is **not** defined, the sketch builds in "normal" mode.
+When the `ZWIFT_SAFE_MODE` directive is **not** defined, the sketch builds in "normal" mode.
 In this mode the USB interface remains a normal CDC serial device:
 
 - Arduino IDE uploads and Serial Monitor work as usual.
