@@ -3,7 +3,7 @@
 
 ---
 ## 🔀 Connection Order Matters!
-Zwift is instructed to connect automatically to devices it knows. So when Zwift detects the **Tacx trainer** before the **Tacx-Dongle**, it connects and the Tacx-Dongle is left empty-handed: **NO pairing with the Tacx trainer**!<br>
+Zwift is instructed to connect automatically to devices it knows. So when Zwift detects the **Tacx trainer** before the **Tacx-Dongle-VS**, it connects and the Tacx-Dongle is left empty-handed: **NO pairing with the Tacx trainer, since it is already in use**!<br>
 
 The following order provides the best guarantee for a problem-free connection: 
 
@@ -24,7 +24,7 @@ the pairing screens! Notice: Zwift extends device names with additional numbers 
 ---
 
 ## ↔️ Display Readability
-Sometimes the orientation of the dongle, when connected to an USB-A port of a device, should need to be flipped (180°) to have a better readability of the display.<br>
+Sometimes the orientation of the **Tacx-Dongle-VS**, when connected to an USB-A port of a device, should need to be flipped (180°) to have a better readability of the display.<br>
 In **Arduino Ide** open `Tacx-Dongle-Virtual-Shifting.ino`. Open the TAB with `TacxDiplay.h` and go to this section:
 
 ```C++
@@ -37,14 +37,14 @@ In **Arduino Ide** open `Tacx-Dongle-Virtual-Shifting.ino`. Open the TAB with `T
 
 ---
 
-## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
+## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to a laptop/computer running Zwift?
 <img src="../media/Screen_5.png" width="350" height="250" align= "left" alt="Laptop_connected"> </br>
 When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a Tacx trainer....<br>
 
 However, when Zwift starts and reaches its **pairing screen**, the app (and its helper processes) aggressively scan for trainer interfaces — both *wireless* (BLE) and *wired* (USB).
 <br clear="left">
 
-Specifically:
+**Specifically:**
 
 - Zwift’s pairing module historically looks for **all USB HID and serial devices** that identify as:
 
