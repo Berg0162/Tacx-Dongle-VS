@@ -2,6 +2,25 @@
 # 🔧Troubleshooting
 
 ---
+## Connection Order Matters
+Zwift is instructed to connect automatically to devices it knows. So when Zwift detects the Tacx trainer before the Tacx-Dongle, it connects and the Tacx-Dongle remains empty handed!<br>
+The following order provides the best guarantee for a problem-free connection: 
+
+ 1. Start/Power-on the Tacx-Dongle and inspect the display and led info
+ 2. Start/Power-On the Tacx Smart Trainer  
+ 3. Your Tacx-Dongle and Trainer will pair
+ 4. Start Zwift-App on your computer or tablet and wait....
+ 5. Search on the Zwift pairing screens for the Tacx-Dongle a.k.a. <TACXS>
+ 6. Pair: Power, Controllable and Cadence one after another with <TACXS>
+ 7. Pair: Controls, your Zwift Click device and optionally others
+ 8. Pair: Heartrate (optionally)
+ 9. Select any Zwift ride you like
+10. Hop on the bike: Zwift Click gear up/down and feel resistance change during the ride
+ 
+The Dongle is identified with the name <TACXS>. You will see this only when connecting to Zwift on 
+the pairing screens! Notice: Zwift extends device names with additional numbers for identification!
+
+---
 
 ## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
 <img src="../media/Screen_5.png" width="350" height="250" align= "left" alt="Laptop_connected"> </br>
