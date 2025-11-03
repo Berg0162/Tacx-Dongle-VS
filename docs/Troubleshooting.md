@@ -73,10 +73,12 @@ Zwift will ignore the dongle, preventing the repeated USB resets that occur when
 ⚠️ Uploads via Arduino IDE: **not** possible directly after flashing this mode.
 To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
 
+⚠️ If both flags are defined in the code, `CDC_JTAG` automatically overrides `ZWIFT_SAFE_MODE` mode!
+
 When the `ZWIFT_SAFE_MODE` directive is **not** defined, the sketch builds in "normal" mode.
 In this mode the USB interface remains a normal CDC serial device:
 
-- Arduino IDE uploads and Serial Monitor work as usual.
+- Arduino IDE uploads and Serial Monitor works as usual.
 
 - Zwift may repeatedly probe the dongle if connected to the same computer.
 
