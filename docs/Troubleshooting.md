@@ -87,7 +87,7 @@ When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Don
 to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
 This makes the dongle appear to a computer as a harmless HID device rather than a serial port.
 
-❗Recommended (**especially**) for use of an USB-A Port that belongs to the laptop/computer running Zwift.<br>
+❗**Recommended (especially) for use of an USB-A Port that belongs to the laptop/computer running Zwift**.<br>
 **`Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.`**
 
 ⚠️ Uploads via Arduino IDE: **not** possible directly after flashing this mode.
@@ -108,9 +108,9 @@ Zwift scans every USB device when pairing with trainers and ANT+ dongles.
 Devices that identify as serial (CDC) or as known trainer brands (Tacx, Garmin, Wahoo, etc.) are queried repeatedly.
 By switching the T-Dongle-S3 to the TinyUSB HID class, the dongle presents itself
 as a generic **Human Interface Device** with an unrecognized vendor/product ID.
-Zwift’s discovery logic quickly marks it as irrelevant and stops polling it.
-As a result, the dongle remains stable and continues to bridge BLE data
-without interference from Zwift’s USB scans.
+Zwift’s discovery logic quickly marks it as irrelevant and stops polling it.<br>
+**As a result, the dongle remains stable and continues to bridge BLE data
+without interference from Zwift’s USB scans**.
 
 ### 🧩 What’s going on when connected to computer running Arduino IDE
 
@@ -143,7 +143,7 @@ The ESP32-S3 includes a built-in USB bootloader that always runs before your ske
 
 1. **Unplug** the dongle from power.
 
-2. **Press and hold** the **BOOT** button (on the back side of the T-Dongle-S3).
+2. **Press firmly and hold** the **BOOT** button (on the back side of the T-Dongle-S3).
 
 3. **While holding BOOT**, plug in the dongle via USB-A to your computer with Arduino IDE.
 
