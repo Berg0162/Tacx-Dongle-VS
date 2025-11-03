@@ -24,7 +24,7 @@ the pairing screens! Notice: Zwift extends device names with additional numbers 
 ---
 
 ## 🧩 Display Readability
-Sometimes the orientation of the dongle, when connected to an USB-A port of a device, needs to be flipped (180°) to have a better readabilty.<br>
+Sometimes the orientation of the dongle, when connected to an USB-A port of a device, needs to be flipped (180°) to have a better readability.<br>
 In **Arduino Ide** open `Tacx-Dongle-Virtual-Shifting.ino`. Open the TAB with `TacxDiplay.h` and go to this section:
 
 ```C++
