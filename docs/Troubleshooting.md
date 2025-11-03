@@ -49,17 +49,13 @@ However, when Zwift starts and reaches its **pairing screen**, the app (and its 
 - Zwift’s pairing module historically looks for **all USB HID and serial devices** that identify as:
 
 	- The original **Tacx i-Magic / Bushido USB trainers**,
-
 	- **Wahoo KICKR** via **USB HID dongles**,
-
 	- and **ANT+ dongles** that show up as USB CDC devices.
 	
 - It also resets and queries each connected USB-A device to check its **Vendor ID / Product ID / Interface descriptors**.
 
 This process causes **momentary USB bus resets** on some ports — particularly:
-
 - On Windows and macOS laptops where Zwift runs in full control,
-
 - On ports connected to the main root hub (shared power domain).
 
 So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any of the following measures!
