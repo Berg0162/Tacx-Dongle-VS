@@ -2,12 +2,13 @@
 # 🔧Troubleshooting
 
 ---
-## Connection Order Matters
-Zwift is instructed to connect automatically to devices it knows. So when Zwift detects the Tacx trainer before the Tacx-Dongle, it connects and the Tacx-Dongle remains empty handed!<br>
+## 🔀 Connection Order Matters!
+Zwift is instructed to connect automatically to devices it knows. So when Zwift detects the **Tacx trainer** before the **Tacx-Dongle**, it connects and the Tacx-Dongle is left empty-handed: **NO pairing with the Tacx trainer**!<br>
+
 The following order provides the best guarantee for a problem-free connection: 
 
- 1. Start/Power-on the Tacx-Dongle and inspect the display and led info
- 2. Start/Power-On the Tacx Smart Trainer  
+ 1. Power-On the Tacx-Dongle and inspect the display and led info
+ 2. Power-On the Tacx Smart Trainer  
  3. Your Tacx-Dongle and Trainer will pair
  4. Start Zwift-App on your computer or tablet and wait....
  5. Search on the Zwift pairing screens for the Tacx-Dongle a.k.a. <TACXS>
