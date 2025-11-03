@@ -50,7 +50,7 @@ This process causes **momentary USB bus resets** on some ports — particularly:
 
 So when Zwift probes the USB bus, that probe cycle triggers a device re-enumeration — effectively causing your ESP32-S3 to reset. That’s legacy behavior, not a bug. Todays practice is that **Tacx-Dongle-VS** is repeatedly reset and never runs the code properly, when you do not take any of the following measures!
 
-### ✅ Workarounds
+### ⚙️ Workarounds
 
 1. **Use an additional data-blocking USB adapter**
 
@@ -81,7 +81,7 @@ When powered from the laptop/computer (with Zwift running):<br>
 
 ---
  
-## 🔮Compile the code with `ZWIFT_SAFE_MODE` defined
+## 🗝️ Builtin Solution: compile the code with `ZWIFT_SAFE_MODE` defined
 
 When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Dongle-S3’s USB interface
 to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
@@ -95,7 +95,7 @@ To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Do
 
 ⚠️ If both flags are defined in the code, `CDC_JTAG` automatically overrides `ZWIFT_SAFE_MODE` mode!
 
-When the `ZWIFT_SAFE_MODE` directive is **not** defined, the sketch builds in "normal" mode.
+When the `ZWIFT_SAFE_MODE` directive is **NOT** defined, the sketch builds in "normal" mode.
 In this mode the USB interface remains a normal CDC serial device:
 
 - Arduino IDE uploads and Serial Monitor works as usual.
@@ -112,7 +112,7 @@ Zwift’s discovery logic quickly marks it as irrelevant and stops polling it.<b
 **As a result, the dongle remains stable and continues to bridge BLE data
 without interference from Zwift’s USB scans**.
 
-### 🧩 What’s going on when connected to computer running Arduino IDE
+### 🧩 What’s going on when connected to the computer running Arduino IDE
 
 When you select **Hardware CDC and JTAG** in the `Tools → Menu`:
 
