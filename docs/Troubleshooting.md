@@ -52,7 +52,7 @@ So when Zwift probes the USB bus, that probe cycle triggers a device re-enumerat
 
 ### ⚙️ Workarounds
 
-1. **Use an additional data-blocking USB adapter**
+1️⃣ **Use an additional data-blocking USB adapter**
 
 Use a **USB “charge-only” cable** or **data blocker** that passes only +5 V and GND, not D+ or D–.
 This keeps your laptop as the power source but prevents Zwift resets.
@@ -63,7 +63,7 @@ This keeps your laptop as the power source but prevents Zwift resets.
 These are inexpensive adapters often called “USB condom” or “data blocker”. Perfect for stable powering of ESP devices from a PC port.
 <br clear="left">
 
-2. **Use a wall adapter (USB-A charger) or a small power bank if you want absolute stability.**
+2️⃣ **Use a wall adapter (USB-A charger) or a small power bank if you want absolute stability.**
 
 <img src="../media/Screen_7.png" width="225" height="600" align= "left" alt="Wall adapter"><br>
 
@@ -90,7 +90,7 @@ This makes the dongle appear to a computer as a harmless HID device rather than 
 ❗**Recommended (especially) for use of an USB-A Port that belongs to the laptop/computer running Zwift**.<br>
 **`Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.`**
 
-⚠️ Uploads via Arduino IDE: **not** possible directly after flashing this mode.
+⚠️ Uploads via Arduino IDE: **NOT** possible directly after flashing this mode.
 To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
 
 ⚠️ If both flags are defined in the code, `CDC_JTAG` automatically overrides `ZWIFT_SAFE_MODE` mode!
