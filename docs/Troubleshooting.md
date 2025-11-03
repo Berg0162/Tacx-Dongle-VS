@@ -7,25 +7,25 @@ Zwift is instructed to connect automatically to devices it knows. So when Zwift 
 
 The following order provides the best guarantee for a problem-free connection: 
 
- 1. Power-On the Tacx-Dongle and inspect the display and led info
- 2. Power-On the Tacx Smart Trainer  
+ 1. **Power-On** the **Tacx-Dongle** and inspect the display and led info
+ 2. **Power-On** the **Tacx Smart Trainer**  
  3. Your Tacx-Dongle and Trainer will pair
- 4. Start Zwift-App on your computer or tablet and wait....
- 5. Search on the Zwift pairing screens for the Tacx-Dongle a.k.a. <TACXS>
- 6. Pair: Power, Controllable and Cadence one after another with <TACXS>
- 7. Pair: Controls, your Zwift Click device and optionally others
- 8. Pair: Heartrate (optionally)
- 9. Select any Zwift ride you like
-10. Hop on the bike: Zwift Click gear up/down and feel resistance change during the ride
+ 4. **Start Zwift-App** on your computer or tablet and wait....
+ 5. Search on the Zwift pairing screens for the Tacx-Dongle a.k.a. `TACXS`
+ 6. **Pair: Power, Controllable and Cadence** one after another with `TACXS`
+ 7. **Pair: Controls**, your Zwift Click device and optionally others
+ 8. **Pair: Heartrate** (optionally)
+ 9. **Select any Zwift ride** you like
+10. Hop on the bike: **Zwift Click Gear up/down** and **feel resistance change** during the ride
  
-The Dongle is identified with the name <TACXS>. You will see this only when connecting to Zwift on 
+The Dongle is identified with the name `TACXS`. You will see this only when connecting to Zwift on 
 the pairing screens! Notice: Zwift extends device names with additional numbers for identification!
 
 ---
 
 ## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
 <img src="../media/Screen_5.png" width="350" height="250" align= "left" alt="Laptop_connected"> </br>
-When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a tacx trainer....<br>
+When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a Tacx trainer....<br>
 
 However, when Zwift starts and reaches its **pairing screen**, the app (and its helper processes) aggressively scan for trainer interfaces — both *wireless* (BLE) and *wired* (USB).
 <br clear="left">
@@ -87,8 +87,8 @@ When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Don
 to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
 This makes the dongle appear to a computer as a harmless HID device rather than a serial port.
 
-❗Recommended (**especially**) for use of an USB-A Port that belongs to the laptop/computer running Zwift.
-Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.
+❗Recommended (**especially**) for use of an USB-A Port that belongs to the laptop/computer running Zwift.<br>
+**`Zwift will ignore the dongle, preventing the repeated USB resets that occur when it tries to probe serial devices.`**
 
 ⚠️ Uploads via Arduino IDE: **not** possible directly after flashing this mode.
 To reprogram the dongle, [see next section.](https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md#-safe-boot--reflashing-guide)
