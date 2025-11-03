@@ -1,6 +1,6 @@
 /***************************************************************************************************
 
-                    This is programming code for ESP32 Espressif boards
+              This is programming code for ESP32-S3 Espressif boards, requirements:
  
               Hardware: LilyGo T-Dongle-S3 (ESP32-S3) with 0.96" IPS ST7735S (80x160)
               Library:  Tacx-Virtual-Shifting
@@ -16,33 +16,32 @@
                       Full attribution and license details are included in:  
                https://github.com/Berg0162/Tacx-Virtual-Shifting/blob/main/NOTICE.txt
 
-***************************************************************************************************
+****************************************************************************************************
 
-Select and upload the example code to your ESP32 board
- 1. Start the Serial Monitor to catch debugging info
+Select and upload this code first to your T-Dongle-S3 and follow the procedure:
+
+ 1. Start/Power-on the Tacx-Dongle and inspect the display and led info
  2. Start/Power-On the Tacx Smart Trainer  
- 3. Your ESP32 and Trainer will pair
+ 3. Your Tacx-Dongle and Trainer will pair
  4. Start Zwift-App on your computer or tablet and wait....
- 5. Search on the Zwift pairing screens for your ESP32 a.k.a. <TACXS>
+ 5. Search on the Zwift pairing screens for the Tacx-Dongle a.k.a. <TACXS>
  6. Pair: Power, Controllable and Cadence one after another with <TACXS>
  7. Pair: Controls, your Zwift Click device and optionally others
  8. Pair: Heartrate (optionally)
  9. Select any Zwift ride you like
-10. Make Serial Monitor output window visible on top of the Zwift window 
-11. Hop on the bike: do the work and feel resistance change when shifting and with road inclination
-12. Inspect the info presented by Serial Monitor.....
+10. Hop on the bike: Zwift Click gear up/down and feel resistance change during the ride
  
 This device is identified with the name <TACXS>. You will see this only when connecting to Zwift on 
 the pairing screens! Notice: Zwift extends device names with additional numbers for identification!
 
 ****************************************************************************************************/
 
-// -------------------------------------------------------------------------------------------
-// COMPILER DIRECTIVE to allow/suppress DEBUG messages that help debugging...
-// Uncomment general "#define DEBUG" to activate
-#define DEBUG
+// --------------------------------------------------------------------------------------------------
+// COMPILER DIRECTIVE to allow/suppress Serial Monitor messages (USB Mode: "Hardware CDC and JTAG")
+// Uncomment general "#define CDC_JTAG" to activate
+#define CDC_JTAG
 
-// --------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
 #include <TacxVirtualShifting.h>
 
 #include "TacxDisplay.h"
@@ -51,19 +50,46 @@ TacxDisplay display;
 #include "StatusLed.h"
 StatusLed statusLed;
 
+/*----------------------------------------------------------------------------------------------------
+* When ZWIFT_SAFE_MODE is defined in the code, the firmware configures the T-Dongle-S3’s USB interface
+* to use the "TinyUSB HID stack" instead of the default Arduino "Hardware CDC and JTAG" connection.
+* This makes the dongle appear to a computer as a harmless HID device rather than a serial port.
+* ⚠️ Use with caution: ZWIFT_SAFE_MODE has drawbacks! Check background information first!
+* 💡 See: https://github.com/Berg0162/Tacx-Dongle-VS/blob/main/docs/Troubleshooting.md
+* ---------------------------------------------------------------------------------------------------*/
+// COMPILER DIRECTIVE: Uncomment "#define ZWIFT_SAFE_MODE" to activate
+//#define ZWIFT_SAFE_MODE
+
+#if defined(ZWIFT_SAFE_MODE) && defined(CDC_JTAG)
+  // ⚠️ Warning: ZWIFT_SAFE_MODE and CDC_JTAG are both defined! Defaulting to CDC_JTAG mode.
+  #undef ZWIFT_SAFE_MODE
+#endif
+
+#if defined(ZWIFT_SAFE_MODE) && !defined(CDC_JTAG)
+  // Create alternative TinyUSB HID interface
+  #include <USB.h>
+  #include <USBHID.h>
+  USBHID HID;
+#endif
+
 void setup() {
-#ifdef DEBUG  
+
+#if defined(CDC_JTAG) 
   Serial.setRxBufferSize(96); // Increase RX buffer size
   Serial.begin(115200);       
   while ( !Serial ) delay(10); 
   Serial.flush();
   delay(1000); // Give Serial I/O time to settle
-#endif
-  LOG("ESP32 NimBLE Older Tacx Virtual Shifting");
-  LOG("LilyGo T-Dongle-S3      VS-Version %s", CODE_VERSION);
-  delay(200);
+  Serial.println("---- Tacx Dongle Virtual Shifting ----");
+  Serial.printf("Virtual-Shifting Library Version %s\n", CODE_VERSION);
+  delay(100);
 #ifdef TACXNEO_FIRSTGENERATION
-  LOG(" -> Tacx Neo First Generation modifications active!");
+  Serial.println(" -> Tacx Neo First Generation modifications active!");
+#endif
+#elif defined(ZWIFT_SAFE_MODE)
+  // Start alternative USB HID stack
+  USB.begin();
+  HID.begin();
 #endif
 
   // Initialize Display, IPS ST7735S (80x160)
