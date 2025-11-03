@@ -95,7 +95,7 @@ When powered from the laptop/computer (with Zwift running):<br>
 
 ---
  
-## 🗝️ Builtin Solution: compile the code with `ZWIFT_SAFE_MODE` defined
+## 🗝️ Built-in solution: compile the code with `ZWIFT_SAFE_MODE` defined
 
 When `ZWIFT_SAFE_MODE` is defined in the code, the firmware configures the T-Dongle-S3’s USB interface
 to use the **TinyUSB HID stack** instead of the default Arduino **Hardware CDC and JTAG** connection.
