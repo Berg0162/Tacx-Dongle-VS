@@ -23,6 +23,20 @@ the pairing screens! Notice: Zwift extends device names with additional numbers 
 
 ---
 
+## 🧩 Display Readability
+Sometimes the orientation of the dongle, when connected to an USB-A port of a device, needs to be flipped (180°) to have a better readabilty.<br>
+In **Arduino Ide** open `Tacx-Dongle-Virtual-Shifting.ino`. Open the TAB with `TacxDiplay.h` and go to this section:
+
+```C++
+// Orientation: true = USB connector is pointing to the RIGHT (rotate 180°)
+#define USB_TO_THE_RIGHT false
+```
+
+1. Modify `USB_TO_THE_RIGHT false` into `USB_TO_THE_RIGHT true`. 
+2. Next firmware upload will show the display in flipped orientation for better readability!
+
+---
+
 ## 🧩 What’s happening when connecting **Tacx-Dongle-VS** to an USB-A Port that belongs to the laptop/computer running Zwift?
 <img src="../media/Screen_5.png" width="350" height="250" align= "left" alt="Laptop_connected"> </br>
 When the **T-Dongle-S3** is powered from a computer’s USB port, the operating system (Windows, macOS, or Linux) automatically tries to enumerate the connected USB device — that means it checks what kind of device it is (Serial, HID, Mass Storage, etc.) and may assign a COM port. Sofar no problems! The Tacx-Dongle-VS boots, runs the code, and even is connecting to a Tacx trainer....<br>
