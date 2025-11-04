@@ -1,5 +1,6 @@
 # Exclude non-essential folders from exported ZIP
 /media export-ignore
+/docs export-ignore
 README.md export-ignore
 
 # Exclude repo metadata (optional)
