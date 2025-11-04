@@ -163,7 +163,9 @@ The ESP32-S3 includes a built-in USB bootloader that always runs before your ske
 
 6. **Upload** your new sketch normally.
 
-7. When finished, the dongle will reboot into your new firmware.
+7. **Reboot** into new firmware!<br>
+After flashing, the dongle stays in bootloader mode → the display remains blank!<br>
+**Unplug and reconnect to start the new firmware**. When (re)connected, the dongle will always reboot into your new firmware.
 
 >💡 **Note:** Even if your code disables USB CDC during runtime,
 >the **ROM bootloader** always takes control first during upload —
