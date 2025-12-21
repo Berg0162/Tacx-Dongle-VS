@@ -3,6 +3,8 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Berg0162/Tacx-Dongle-VS?sort=semver)](https://github.com/Berg0162/Tacx-Dongle-VS/releases)
 [![Platform: ESP32](https://img.shields.io/badge/platform-ESP32-orange)](https://www.espressif.com/en/products/socs/esp32)
+[![Platform: Zwift](https://img.shields.io/badge/Platform-Zwift-orange)](#)
+[![Platform: Rouvy](https://img.shields.io/badge/Platform-Rouvy-blue)](#)
 [![GitHub issues](https://img.shields.io/github/issues/Berg0162/Tacx-Dongle-VS)](https://github.com/Berg0162/Tacx-Dongle-VS/issues)
 [![GitHub Discussions](https://img.shields.io/github/discussions/Berg0162/Tacx-Dongle-VS)](https://github.com/Berg0162/Tacx-Dongle-VS/discussions)
 
