@@ -148,4 +148,6 @@ If you’re interested in testing, coding, writing docs, or just giving feedback
 
 ## 🔧[Troubleshooting](docs/Troubleshooting.md)
 
+# See Also other [Github projects](https://github.com/Berg0162/) by the maker.
+
 
